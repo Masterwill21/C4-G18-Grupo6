@@ -5,17 +5,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="nomina")
 public class NominaModel {
     @Id
-    private String id_nomina;
+    private String id;
     private EmpleadoModel docu_empleado;
     private Integer mes;
     private Integer dias_trabajados;
     private Float valor_pagar;
 
-    public String getId_nomina() {
-        return id_nomina;
+    
+    public String getId() {
+        return id;
     }
-    public void setId_nomina(String id_nomina) {
-        this.id_nomina = id_nomina;
+    public void setId(String id) {
+        this.id = id;
     }
     public EmpleadoModel getDocu_empleado() {
         return docu_empleado;

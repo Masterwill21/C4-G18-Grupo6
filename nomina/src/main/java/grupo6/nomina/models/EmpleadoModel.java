@@ -5,16 +5,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="empleados")
 public class EmpleadoModel {
     @Id
-    private String documento;
+    private String id;
     private String nombre;
     private String cargo;
     private Float salario;
     
-    public String getDocumento() {
-        return documento;
+        
+    public String getId() {
+        return id;
     }
-    public void setDocumento(String documento) {
-        this.documento = documento;
+    public void setId(String id) {
+        this.id = id;
     }
     public String getNombre() {
         return nombre;
@@ -34,6 +35,4 @@ public class EmpleadoModel {
     public void setSalario(Float salario) {
         this.salario = salario;
     }
-
-    
 }

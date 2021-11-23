@@ -87,7 +87,6 @@ public class UsuarioController {
                                 .setIssuedAt(new Date(tiempo))
                                 .setExpiration(new Date(tiempo + 900000))
                                 .claim("username", auxiliar.getUsername())
-                                .claim("correo", auxiliar.getCorreo())
                                 .compact();
                 }
 

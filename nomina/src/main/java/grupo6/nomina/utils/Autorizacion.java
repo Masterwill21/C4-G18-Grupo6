@@ -1,5 +1,4 @@
 package grupo6.nomina.utils;
-
 import java.io.IOException;
 
 import javax.servlet.Filter;
@@ -16,7 +15,7 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 
-//@Component
+@Component
 public class Autorizacion implements Filter {
     // Llave de cifrado y descifrado
     public static final String KEY = "bjhhjgffgdvkjbkjbkjbjhvhjgd";
@@ -41,7 +40,7 @@ public class Autorizacion implements Filter {
             }try{
                 //Lectura de carga util del JWT
                 Jws<Claims> claims = Jwts.parser().setSigningKey(KEY).parseClaimsJws(hash);
-                if((url.contains("/api/partidos") || url.contains("/api/equipos"))&& (!claims.getBody().get("username").equals(""))){
+                if((url.contains("/api/nominas") || url.contains("/api/empleados"))&& (!claims.getBody().get("username").equals(""))){
                     chain.doFilter(request, response);
                 }
 

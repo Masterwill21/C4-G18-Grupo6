@@ -2,7 +2,6 @@ package grupo6.nomina.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
 @Document(collection="usuarios")
 public class UsuarioModel {
 
@@ -43,6 +42,4 @@ public class UsuarioModel {
     public void setHash(String hash) {
         this.hash = hash;
     }
-
-    
 }

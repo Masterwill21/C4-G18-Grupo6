@@ -16,7 +16,7 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 
-@Component
+//@Component
 public class Autorizacion implements Filter {
     // Llave de cifrado y descifrado
     public static final String KEY = "bjhhjgffgdvkjbkjbkjbjhvhjgd";
